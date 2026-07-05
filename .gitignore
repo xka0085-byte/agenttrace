@@ -1,0 +1,31 @@
+# Binaries
+*.exe
+*.exe~
+
+# Frontend
+web/node_modules/
+web/dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+*.test
+*.out
+
+# Database files (local)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+# Python
+__pycache__/
+*.egg-info/
+*.pyc

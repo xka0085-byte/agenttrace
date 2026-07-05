@@ -1,0 +1,8 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "agenttrace"
+version = "0.1.0"
+description = "Local AI Agent tracing SDK — one line to monitor your LLM calls"
+requires-python = ">=3.9"
