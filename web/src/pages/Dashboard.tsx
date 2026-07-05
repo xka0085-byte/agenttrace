@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { fetchTraces, fetchStats, deleteTrace, formatCost, formatMs, formatTime } from '../api'
 import { DashboardSkeleton } from '../Skeleton'
 import type { TraceWithSummary } from '../api'
+import StatTile from '../components/StatTile'
 
 const EMPTY = { total_traces: 0, total_spans: 0, total_cost: 0, total_tokens: 0, error_count: 0 }
 
@@ -110,17 +111,6 @@ export default function Dashboard() {
           </div>
         )}
       </div>
-    </div>
-  )
-}
-
-function StatTile({ label, value, sub, accent }: { label: string; value: string; sub?: string; accent: string }) {
-  return (
-    <div className="stat-tile">
-      <div className={`stat-tile-accent accent-${accent}`} />
-      <div className="stat-tile-label">{label}</div>
-      <div className="stat-tile-value">{value}</div>
-      {sub && <div className="stat-tile-sub">{sub}</div>}
     </div>
   )
 }

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { fetchTrace, formatCost, formatMs, formatTime, kindColor } from '../api'
 import { TraceViewSkeleton } from '../Skeleton'
 import type { Span, Trace } from '../api'
+import StatTile from '../components/StatTile'
 
 export default function TraceView() {
   const { id } = useParams<{ id: string }>()
@@ -279,16 +280,6 @@ function SpanNode({ span, getChildren, depth, selectedId, onSelect }: {
 }
 
 // ── Helpers ──
-
-function StatTile({ label, value, accent }: { label: string; value: string; accent: string }) {
-  return (
-    <div className="stat-tile">
-      <div className={`stat-tile-accent accent-${accent}`} />
-      <div className="stat-tile-label">{label}</div>
-      <div className="stat-tile-value">{value}</div>
-    </div>
-  )
-}
 
 function DetailField({ label, value }: { label: string; value: React.ReactNode }) {
   return (
